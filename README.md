@@ -1,0 +1,1 @@
+Rozwiązanie zadania rekrutacyjnego.
