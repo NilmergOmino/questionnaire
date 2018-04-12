@@ -1,0 +1,22 @@
+.infoPanel {
+    @include flex(column,nowrap,center,center,center);
+    text-align: center;
+    &.-hidden {
+        display: none;
+    }
+    &_heading {
+        margin: 0 0 2em 0;
+        font-size: 1.5em;
+        color: $colorMineShaft;
+    }
+    &_heading.-title {
+        font-size: 1.5em;
+        color: $colorMineShaft;
+    }
+    &_heading.-thanks {
+
+    }
+    &_button.-start {
+
+    }
+}

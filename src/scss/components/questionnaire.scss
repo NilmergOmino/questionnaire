@@ -1,0 +1,10 @@
+.questionnaire {
+    @include flex(column,nowrap,center,stretch,center);
+    overflow: hidden;
+    &_infoPanel {
+
+    }
+    &_form {
+        
+    }
+}

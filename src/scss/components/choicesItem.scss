@@ -1,0 +1,72 @@
+.choicesItem {
+    @include flex(column,nowrap,center,stretch,center);
+    &.-hidden {
+        display: none;
+    }
+    &_box.-label {
+        margin: .5em 0;
+        position: relative;
+    }
+    &_label {
+        @include flex(row,nowrap,flex-start,center,center);
+        z-index: 5;
+        background-color: $colorGallery;
+        font-size: 1.5em;
+        border-radius: .5em;
+        width: 100%;
+        padding: .5em 1em .5em 2.5em;
+        position: relative;
+        transition: $timeMedium;
+        line-height: 1.3em;
+        cursor: pointer;
+    }
+    &_radio:checked + &_label {
+        background-color: $colorMalibu;
+    }
+    &_radio {
+        margin-right: 1em;
+        appearance: none;
+        position: absolute;
+        height: 1.6em;
+        width: 1.6em;
+        top: calc(50% - .8em);
+        left: 1em;
+        z-index: 10;
+    }
+    &_radio:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+        background-color: darken($colorGallery, 15%);
+        transition: $timeMedium;
+    }
+    &_radio:checked:before{
+        background-color: darken($colorMalibu, 5%);
+    }
+    &_radio:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        transform: scale(2);
+        opacity: 0;
+        transition: $timeMedium;
+    }
+    &_radio:checked,
+    &_radio:focus {
+        outline: none;
+    }
+    &_radio:checked:after,
+    &_radio:focus:after{
+        outline: none;
+        transform: scale(.5);
+        opacity: 1;
+    }
+}

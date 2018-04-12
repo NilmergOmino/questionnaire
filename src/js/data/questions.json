@@ -1,0 +1,19 @@
+{
+    "name": "Questionnaire about blabla.",
+    "q1": {
+        "question": "blablabla?",
+        "choices": [
+                    "aa",
+                    "bb",
+                    "cc"
+        ]
+    },
+    "q2": {
+        "question": "blablabla?",
+        "choices": [
+                    "dd",
+                    "ee",
+                    "ff"
+        ]
+    }
+}

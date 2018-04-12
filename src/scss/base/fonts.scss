@@ -1,1 +1,7 @@
-$font-main: 'Roboto', sans-serif;
+@font-face {
+    font-family: 'Somatic';
+    // src: url('../assets/fonts/Somatic-Rounded.otf') format('opentype');
+    src: url('./vendor/Somatic-Rounded.otf') format('opentype');
+}
+
+$font-main: 'Somatic', sans-serif;

@@ -1,0 +1,38 @@
+.form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    &.-hidden {
+        display: none;
+    }
+    &_question {
+
+    }
+
+    &_choicesItem {
+
+    }
+    &_box.-buttons {
+        @include flex(row,nowrap,space-between,center,center);
+        margin: 1em 0;
+    }
+    &_progressBar{
+        display: block;
+        border-radius: 1em;
+        height: 1em;
+        overflow: hidden;
+        background-color: $colorMercury;
+        position: relative;
+    }
+    &_progress {
+        transition: $timeFast;
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 20%;
+        background-color: $colorMalibu;
+    }
+}

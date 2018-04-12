@@ -33,9 +33,8 @@ h6 { font-size: $size-6;}
 p  { line-height: 1.5em;}
 
 button, input, optgroup, select, textarea {
-    box-sizing: border-box;
     font-family: $font-main;
 }
-nav,main,aside,article,section,footer,header,figure,div {
+* {
     box-sizing: border-box;
 }

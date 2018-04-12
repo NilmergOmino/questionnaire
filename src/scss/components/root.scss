@@ -1,0 +1,36 @@
+.root {
+    background-color: $colorMercury;
+    &_box.-wrapper {
+        @include flex(column,nowrap,center,stretch,center);
+        background-color: white;
+        box-shadow: 0 0 15px 1px rgba(black,0.15);
+        min-height: 100vh;
+        margin: 0 auto;
+        padding: 5vh 5%;
+        width: 100%;
+        @include screen(mobile) {
+            width: 90%;
+        }
+        @include screen(tablet) {
+            width: 75%;
+        }
+        @include screen(desktop) {
+            width: 55%;
+        }
+        @include screen('min-width: 1300px') {
+            width: 45%;
+        }
+        @include screen('min-width: 1500px') {
+            width: 35%;
+        }
+    }
+    &_header {
+
+    }
+    &_main {
+        min-height: 50vh;
+    }
+    &_footer {
+
+    }
+}
