@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/css/fontello/css/fontello.css">
     <link rel="stylesheet" href="dist/css/style.css">
     <title>questionnaire</title>
 </head>
@@ -11,8 +12,8 @@
     <div class="root_box -wrapper">
         <header class="root_header header">
             <h1 class="header_heading">
-                <a href="" class="header_link">
-                    <svg class="header_logo logo" width="153px" height="39px" viewBox="0 0 153 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <a href="" class="header_logo logo">
+                    <svg class="logo_image" width="153px" height="39px" viewBox="0 0 153 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="Somatic-Rounded, Somatic" font-weight="normal">
                             <text class="logo_legit" font-size="36" fill="#7991FF">
                                 <tspan x="-1" y="29">Legit</tspan>
@@ -26,9 +27,9 @@
             </h1>
         </header>
         <main class="root_main">
-            <article class="main_questionnaire questionnaire">
+            <article class="questionnaire">
                 <div class="questionnaire_infoPanel infoPanel" id="startPanel">
-                    <h2 class="infoPanel_heading -title" id="questionnaireTitle">Lorem ipsum.</h2>
+                    <h2 class="infoPanel_heading -title" id="questionnaireTitle"></h2>
                     <button class="infoPanel_button -start _button" id="buttonStart">Start</button>
                 </div>
                 <div class="questionnaire_infoPanel infoPanel -hidden" id="endPanel">
@@ -36,31 +37,20 @@
                 </div>
                 <form class="main_form form -hidden" id="form">
                     <div class="form_box" id="choicesContainer">
-                        <!-- <div class="form_choicesItem choicesItem -hidden _js-choices">
-                        <h3 class="form_question">Lorem ipsum dolor.</h3>
-                            <div class="choicesItem_box">
-                                <input type="radio" name="q1" class="choicesItem_radio" value="Lorem ipsum dolor." id="q1-1">
-                                <label class="choicesItem_label" for="q1-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic illo quisquam minima ducimus sint harum.</label>
-                            </div>
-                            <div class="choicesItem_box">
-                                <input type="radio" name="q1" class="choicesItem_radio" value="Lorem ipsum dolor." id="q1-2">
-                                <label class="choicesItem_label" for="q1-2">Lorem ipsum dolor sit amet.</label>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="form_box -buttons">
-                        <button class="form_button -back _button" id="buttonBack">Back</button>
+                        <button class="form_button -back _button" id="buttonBack"><span class="icon-left-big"></span> Back</button>
                         <button class="form_button -finish _button -hidden" id="buttonFinish">Save & Send</button>
-                        <button class="form_button -next _button" id="buttonNext">Next</button>
+                        <button class="form_button -next _button" id="buttonNext">Next <span class="icon-right-big"></span></button>
                     </div>
-                    <div class="form_progressBar">
-                        <span class="form_progress" aria-label="5 questions left" id="progress"></span>
+                    <div class="form_progressBar" id="progressBar">
+                        <span class="form_progress" id="progress"></span>
                     </div>
                 </form>
             </article>
         </main>
         <footer class="root_footer footer">
-            <p class="footer_paragraph">Legit company &copy; 2018</p>
+            <p class="footer_paragraph">legit company &copy; 2018</p>
         </footer>
     </div>
 <script src="dist/js/bundle.js"></script>

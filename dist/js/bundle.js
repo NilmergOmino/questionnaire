@@ -88,12 +88,11 @@ var Query = {
     buttonNext: document.getElementById('buttonNext'),
     buttonFinish: document.getElementById('buttonFinish'),
     progress: document.getElementById('progress'),
+    progressBar: document.getElementById('progressBar'),
     init: function init() {
         this.setTitle();
         this.questionsArr = [];
-        // this.progress = 0;
         this.setQuestions();
-        this.setProgress(0);
         this.radioItems = document.querySelectorAll('._js-radio');
         this.currentQuestion = 0;
         this.lastQuestion = this.questionsArr.length - 1;
@@ -135,16 +134,13 @@ var Query = {
                     questionTitle.classList.add('form_question');
                     questionTitle.textContent = Questions[key].question;
                     choicesItem.appendChild(questionTitle);
-
                     fragment.appendChild(choicesItem);
                     Questions[key].choices.forEach(function (el, index) {
                         var choiceBox = document.createElement('div');
                         choiceBox.classList.add('choicesItem_box');
                         choicesItem.appendChild(choiceBox);
                         var id = key + "-" + index;
-
                         choiceBox.innerHTML = '<input type="radio" name="' + key + '" class="choicesItem_radio _js-radio" value="' + el + '" id="' + id + '">';
-
                         choiceBox.innerHTML += '<label for="' + id + '" class="choicesItem_label">' + el + '</label>';
                     });
                     Query.questionsArr.push(choicesItem);
@@ -160,7 +156,10 @@ var Query = {
     setProgress: function setProgress(value) {
         var max = Query.lastQuestion + 1;
         var current = value / max * 100;
-        Query.progress.style.width = current + '%';
+        this.progress.style.width = current + '%';
+        var left = max - value;
+        var titleInfo = left == 1 ? left + ' question left' : left + ' questions left';
+        this.progressBar.setAttribute('title', titleInfo);
     },
     hide: function hide(el) {
         el.classList.add('-hidden');
@@ -169,24 +168,24 @@ var Query = {
         el.classList.remove('-hidden');
     },
     showQuestion: function showQuestion(direction) {
-        Query.questionsArr.forEach(function (el) {
+        this.questionsArr.forEach(function (el) {
             return Query.hide(el);
         });
-        Query.currentQuestion += direction;
-        if (Query.currentQuestion <= 0) {
-            Query.currentQuestion = 0;
-            Query.disableButton(Query.buttonBack);
-            Query.enableButton(Query.buttonNext);
-        } else if (Query.currentQuestion >= Query.lastQuestion) {
-            Query.currentQuestion = Query.lastQuestion;
-            Query.disableButton(Query.buttonNext);
-            Query.enableButton(Query.buttonBack);
+        this.currentQuestion += direction;
+        if (this.currentQuestion <= 0) {
+            this.currentQuestion = 0;
+            this.disableButton(this.buttonBack);
+            this.enableButton(this.buttonNext);
+        } else if (this.currentQuestion >= this.lastQuestion) {
+            this.currentQuestion = this.lastQuestion;
+            this.disableButton(this.buttonNext);
+            this.enableButton(this.buttonBack);
         } else {
-            Query.enableButton(Query.buttonNext);
-            Query.enableButton(Query.buttonBack);
+            this.enableButton(this.buttonNext);
+            this.enableButton(this.buttonBack);
         }
-        var element = Query.questionsArr[Query.currentQuestion];
-        Query.show(element);
+        var element = this.questionsArr[this.currentQuestion];
+        this.show(element);
     },
     disableButton: function disableButton(el) {
         el.classList.add('-disabled');
@@ -200,7 +199,7 @@ var Query = {
             Query.hide(Query.form);
             Query.show(Query.endPanel);
             event.preventDefault();
-            // sending all answers from filled form (database needed)
+            // this is a place to send all answers from filled form (database needed)
         });
     }
 };
@@ -215,7 +214,7 @@ var Query = {
 /* 2 */
 /***/ (function(module, exports) {
 
-module.exports = {"title":"Questionnaire about blabla.","q1":{"question":"blablabla?","choices":["aa","bb","cc"]},"q2":{"question":"blabla?","choices":["dd","ee","ff"]},"q3":{"question":"blablaxx?","choices":["dgag","agaw","ff","agqawet"]}}
+module.exports = {"title":"Questionnaire about blablalorem10 safwerq3wrtq35t2352343rffffffffffffff.","q1":{"question":"blablabla?","choices":["aa","bb","cc"]},"q2":{"question":"blabla?","choices":["dd","ee","ff"]},"q3":{"question":"blablaxx?","choices":["dgag","agaw","ff","agqawet"]}}
 
 /***/ })
 /******/ ]);

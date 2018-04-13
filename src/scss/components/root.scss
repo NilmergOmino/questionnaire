@@ -11,26 +11,29 @@
         @include screen(mobile) {
             width: 90%;
         }
-        @include screen(tablet) {
+        @include screen('min-width: 550px') {
+            padding: 5vh 8%;
             width: 75%;
         }
+        @include screen(tablet) {
+            padding: 5vh 12%;
+            width: 70%;
+        }
         @include screen(desktop) {
-            width: 55%;
+            width: 65%;
         }
         @include screen('min-width: 1300px') {
-            width: 45%;
+            width: 55%;
         }
         @include screen('min-width: 1500px') {
-            width: 35%;
+            width: 50%;
         }
-    }
-    &_header {
-
+        @include screen('min-width: 2700px') {
+            padding: 5vh 5%;
+            width: 30%;
+        }
     }
     &_main {
         min-height: 50vh;
-    }
-    &_footer {
-
     }
 }

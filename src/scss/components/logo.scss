@@ -1,0 +1,18 @@
+.logo {
+    &_hover,
+    &_focus {
+        outline: none;
+    }
+    &_legit,
+    &_company {
+        transition: $timeFast;
+    }
+    &:hover &_legit,
+    &:focus &_legit{
+        fill: darken($colorMalibu, 8%);
+    }
+    &:hover &_company,
+    &:focus &_company{
+        fill: darken(#c3c3c3, 15%);
+    }
+}
