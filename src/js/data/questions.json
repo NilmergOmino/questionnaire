@@ -1,28 +1,38 @@
 {
-    "title": "Questionnaire about blablalorem10 safwerq3wrtq35t2352343rffffffffffffff.",
+    "title": "Questionnaire about reading.",
     "q1": {
-        "question": "blablabla?",
+        "question": "How many books did you read last year?",
         "choices": [
-                    "aa",
-                    "bb",
-                    "cc"
+                    "none",
+                    "less than 3",
+                    "from 3 to 5",
+                    "more than 5"
         ]
     },
     "q2": {
-        "question": "blabla?",
+        "question": "What is your motivation to read books?",
         "choices": [
-                    "dd",
-                    "ee",
-                    "ff"
+                    "learning",
+                    "pleasure",
+                    "both"
         ]
     },
     "q3": {
-        "question": "blablaxx?",
+        "question": "What do you read most often?",
         "choices": [
-                    "dgag",
-                    "agaw",
-                    "ff",
-                    "agqawet"
+                    "books",
+                    "magazines",
+                    "articles in internet",
+                    "nothing from above"
+        ]
+    },
+    "q4": {
+        "question": "How fast do you read (words per minute)",
+        "choices": [
+                    "less than 200",
+                    "from 200 to 400",
+                    "from 400 to 800",
+                    "above 800"
         ]
     }
 }
