@@ -1,5 +1,5 @@
 {
-    "name": "Questionnaire about blabla.",
+    "title": "Questionnaire about blabla.",
     "q1": {
         "question": "blablabla?",
         "choices": [
@@ -9,11 +9,20 @@
         ]
     },
     "q2": {
-        "question": "blablabla?",
+        "question": "blabla?",
         "choices": [
                     "dd",
                     "ee",
                     "ff"
+        ]
+    },
+    "q3": {
+        "question": "blablaxx?",
+        "choices": [
+                    "dgag",
+                    "agaw",
+                    "ff",
+                    "agqawet"
         ]
     }
 }

@@ -16,6 +16,12 @@
         @include flex(row,nowrap,space-between,center,center);
         margin: 1em 0;
     }
+    &_button.-disabled {
+        opacity: .5;
+    }
+    &_button.-hidden {
+        display: none;
+    }
     &_progressBar{
         display: block;
         border-radius: 1em;
@@ -28,11 +34,10 @@
         transition: $timeFast;
         display: block;
         height: 100%;
-        width: 100%;
+        width: 0%;
         position: absolute;
         top:0;
         left: 0;
-        width: 20%;
         background-color: $colorMalibu;
     }
 }

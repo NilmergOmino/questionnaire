@@ -545,6 +545,10 @@ button, input, optgroup, select, textarea {
     align-items: center;
     align-content: center;
     margin: 1em 0; }
+  .form_button.-disabled {
+    opacity: .5; }
+  .form_button.-hidden {
+    display: none; }
   .form_progressBar {
     display: block;
     border-radius: 1em;
@@ -556,11 +560,10 @@ button, input, optgroup, select, textarea {
     transition: 0.3s;
     display: block;
     height: 100%;
-    width: 100%;
+    width: 0%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 20%;
     background-color: #7991ff; }
 
 .choicesItem {
@@ -571,7 +574,7 @@ button, input, optgroup, select, textarea {
   align-content: center; }
   .choicesItem.-hidden {
     display: none; }
-  .choicesItem_box.-label {
+  .choicesItem_box {
     margin: .5em 0;
     position: relative; }
   .choicesItem_label {
